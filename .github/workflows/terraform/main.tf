@@ -13,6 +13,12 @@ resource "aws_s3_bucket_public_access_block" "example" {
   restrict_public_buckets = true
 }
 
+resource "aws_s3_bucket_versioning" "versioning_example" {
+  bucket = aws_s3_bucket.terraform_state.id
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
 data "aws_dynamodb_table" "tableName" {
   name = "amir-tf-dynamodb-demo"
 }
