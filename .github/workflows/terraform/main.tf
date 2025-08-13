@@ -16,7 +16,3 @@ resource "aws_s3_bucket_public_access_block" "example" {
 data "aws_dynamodb_table" "tableName" {
   name = "amir-tf-dynamodb-demo"
 }
-
-resource "aws_vpc" "example-2" {
-  cidr_block = "10.0.0.0/16"
-}
