@@ -2,7 +2,7 @@
 terraform {
   backend "s3" {
     bucket = "tf-state-amir-demo"
-    key = "terraform-state/terraform.tfstate"
+    key    = "terraform-state/terraform.tfstate"
     region = "us-east-1"
- }
+  }
 }

@@ -1,7 +1,7 @@
 # Create a S3 bucket
 resource "aws_s3_bucket" "terraform_state" {
-  bucket		  = "test-s3-bucket-amir-nas"
-  
+  bucket = "test-s3-bucket-amir-nas"
+
 }
 #tfsec:ignore:aws-s3-enable-bucket-encryption
 #tfsec:ignore:aws-s3-encryption-customer-key
