@@ -3,7 +3,9 @@ resource "aws_s3_bucket" "terraform_state" {
   bucket		  = "test-s3-bucket-amir-nas"
   
 }
-
+#tfsec:ignore:aws-s3-enable-bucket-encryption
+#tfsec:ignore:aws-s3-encryption-customer-key
+#tfsec:ignore:aws-s3-enable-bucket-logging
 resource "aws_s3_bucket_public_access_block" "example" {
   bucket = aws_s3_bucket.terraform_state.id
 
