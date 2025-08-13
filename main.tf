@@ -12,3 +12,7 @@ resource "aws_s3_bucket" "terraform_state" {
 data "aws_dynamodb_table" "tableName" {
   name = "amir-tf-dynamodb-demo"
 }
+
+resource "aws_vpc" "example" {
+  cidr_block = "10.0.0.0/16"
+}
