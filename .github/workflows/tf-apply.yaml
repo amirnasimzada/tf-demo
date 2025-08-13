@@ -9,7 +9,6 @@ on:
       - main
   
 permissions:
-  id-token: write   # Required for AWS OIDC
   contents: read
   pull-requests: write
 
@@ -17,6 +16,9 @@ jobs:
   terraform:
     name: Terraform Lint, Validate, Security Scan, and Plan
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: terraform/
 
     steps:
       - name: Checkout repository
