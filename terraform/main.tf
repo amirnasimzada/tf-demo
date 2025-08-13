@@ -21,6 +21,3 @@ resource "aws_s3_bucket_versioning" "versioning_example" {
     status = "Enabled"
   }
 }
-data "aws_dynamodb_table" "tableName" {
-  name = "amir-tf-dynamodb-demo"
-}
